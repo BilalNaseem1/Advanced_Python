@@ -49,3 +49,27 @@ In case if object B also has an instance variable `val_2` which points back to o
 </center>
 
 ## Dynamic vs Static Typing
+### Static typing
+- Programming languages which require a data type for a variable, are called statically typed languages.
+- The data type is also associated with the variable, and the object also ofcourse.
+- Java, C++ etc are statically typed
+
+```java
+String my_var = 10;
+
+//later if we do this - this WONT work!!
+my_var = 10; // will throw an error
+
+// but this will work
+my_var = "abc"; 
+```
+### Dynamic typing
+- Python is dynamically typed. `my_var` would only be a reference to a string object.
+- my_var does not have type, so it can reference an int later on.
+
+## Object Mutability
+- An object stored in a memory address has 2 things
+    1. Type
+    2. State
+
+- Changing data `inside` the object is called modifying the internal state of the object.............
