@@ -103,7 +103,10 @@ var_1 is var_2 # is not for opposite / not(var_1 is var_2)
 ```python
 var_1 == var_2 # != for opposite
 ```
-![alt text](image-4.png)
+
+<center>
+<img src="image-4.png" alt="Example Image" width="600" height="200">
+</center>
 
 ## None Object
 - Can be assigned to variable to indicate that they are not set.
@@ -127,7 +130,7 @@ var_1 == var_2 # != for opposite
 4. `PyPy` - python interpretor written in python which uses RPython - typed subset of python written in C
 
 - At startup python pre-loads a global list of integers
-- Integers in the range (-5 to 256) are called singleton objects. Python will use cached version of the object (Will use shared references).
+- Integers in the range `(-5 to 256)` are called singleton objects. Python will use cached version of the object (Will use shared references).
 - So numbers in this range are `Interned`
 
 `Singleton object are classes which can be only instantiated once`
