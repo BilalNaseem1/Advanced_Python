@@ -57,7 +57,7 @@ In case if object B also has an instance variable `val_2` which points back to o
 ```java
 String my_var = 10;
 
-//later if we do this - this WONT work!!
+// later if we do this - this WONT work!!
 my_var = 10; // will throw an error
 
 // but this will work
@@ -120,8 +120,28 @@ var_1 == var_2 # != for opposite
 - `my_func` is the name of the function
 - `my_func()` will invoke the function
 
-## Optimizations Interning
+## Optimizations Interning - Singletons
 1. `CPython` - written in C - standard
 2. `Jython` - written in Java
 3. `IronPython`
 4. `PyPy` - python interpretor written in python which uses RPython - typed subset of python written in C
+
+- At startup python pre-loads a global list of integers
+- Integers in the range (-5 to 256) are called singleton objects. Python will use cached version of the object (Will use shared references).
+- So numbers in this range are `Interned`
+
+`Singleton object are classes which can be only instantiated once`
+
+<center>
+<img src="image-5.png" alt="Example Image" width="400" height="250">
+</center>
+
+## String Interning
+For Strings, `Identifiers` are interned
+- Variable names
+- Function names
+- Class names
+
+`Identifers are stings which contain letters, _ or numbers`
+
+....
