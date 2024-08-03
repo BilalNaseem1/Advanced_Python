@@ -71,5 +71,57 @@ my_var = "abc";
 - An object stored in a memory address has 2 things
     1. Type
     2. State
+- Changing data `inside` the object is called `modifying the internal state of the object`
+- Data is changed but memory address has not changed. `The object was mutated`. Internal state of the object changed.
+- Object whose internal state can be changed are called mutable.
+- Object whose internal state cannot be changed are called immutable.
+![alt text](image-3.png)
+- Tuples are immutable and if it has integers inside they are also immutable.
 
-- Changing data `inside` the object is called modifying the internal state of the object.............
+### Tuple containing lists
+- If a tuple (immutable) contains lists (which are mutable), we can add elements to indiviual lists
+- The memory address of individual lists remains same and can be edited.
+
+## Function Arguments & Mutability
+- If a function takes in a mutable object - it would be changed permanently. 
+
+## Shared References
+- For immutable objects, memory manager reuses memory references.
+- With mutable objects, memory manager will never create shared references
+
+## Variable Equality
+Variable equality can be found by 2 ways:
+1. Memory Address - are variables pointing to the same object
+2. Object State (data) - The contents of 2 lists which may not be in the same memory address.
+
+### Comparing Memory address 
+```python
+var_1 is var_2 # is not for opposite / not(var_1 is var_2)
+```
+
+### Comparing object state
+```python
+var_1 == var_2 # != for opposite
+```
+![alt text](image-4.png)
+
+## None Object
+- Can be assigned to variable to indicate that they are not set.
+- But the none object is a real object that is managed by the memory manager. (Always will use shared reference when assigning a variable to `None`)
+
+## Everything is an Object
+`Objects are instances of Classes`
+- Functions are instances of the function class/type
+- Class is an instance of the class type
+- Types (for e.g. INT) are also instance of class INT
+
+`All of the things above have memory addresses`
+- So functions also have a memory address
+- `my_func` is the name of the function
+- `my_func()` will invoke the function
+
+## Optimizations Interning
+1. `CPython` - written in C - standard
+2. `Jython` - written in Java
+3. `IronPython`
+4. `PyPy` - python interpretor written in python which uses RPython - typed subset of python written in C
