@@ -146,5 +146,14 @@ For Strings, `Identifiers` are interned
 - Class names
 
 `Identifers are stings which contain letters, _ or numbers`
+- Not all strings are interned by python. They can be forced interned by `sys.intern()` method.
+```python
+import sys
 
-....
+a = sys.intern('The quick brown fox')
+b = sys.intern('The quick brown fox')
+```
+- Only advised to do this when working with NLP.
+
+## Peephole Optimizations - last video
+- Will do later ...
