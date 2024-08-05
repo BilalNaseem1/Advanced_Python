@@ -81,4 +81,27 @@ l = [*l1, *l2]
 ![alt text](image-1.png)
 
 ## ** Unpacking Operator - unpack key-value pairs
-![alt text](image-2.png)
+
+<center>
+<img src="image-2.png" alt="Example Image" width="500" height="200">
+</center>
+
+## *args
+
+<center>
+<img src="image-3.png" alt="Example Image" width="500" height="250">
+</center>
+
+- We're unpacking the tuple 10, 20, 30 into a, b and c which are the parameters of the function.
+
+```python
+def func1(a, b, *c):
+    # code
+
+```
+- This means we're able to accept 2 or more parameters when we call `func1`
+- The `*` parameter name is arbitrary - but its customary to name it `*args`
+
+## Mandatory Keyword Arguments
+- We can make keyword arguments mandatory
+- 011
